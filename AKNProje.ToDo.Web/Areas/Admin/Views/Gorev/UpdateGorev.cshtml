@@ -1,0 +1,46 @@
+﻿@model GorevUpdateViewModel
+@{
+    ViewData["Title"] = "UpdateGorev";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form class="w-75 mx-auto p-3 shadow" method="post">
+    <div class="form-group">
+        <input type="hidden" asp-for="Id" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Ad" class="col-form-label"></label>
+        <span asp-validation-for="Ad" class="text-danger"></span>
+        <input type="text" asp-for="Ad" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Aciklama" class="col-form-label"></label>
+        <span asp-validation-for="Aciklama" class="text-danger"></span>
+        <input type="text" asp-for="Aciklama" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="AciliyetId" class="col-form-label"></label>
+        <span asp-validation-for="AciliyetId" class="text-danger"></span>
+        <select class="form-control" asp-items="ViewBag.Aciliyetler" asp-for="AciliyetId">
+            <option value="-1" hidden>Seçiniz</option>
+        </select>
+    </div>
+    @*<div class="form-group">
+        <label asp-for="Durum"></label>
+        <span asp-validation-for="Durum"></span>
+        <input type="text" asp-for="Durum" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Rapor"></label>
+        <span asp-validation-for="Rapor"></span>
+        <input type="text" asp-for="Rapor" />
+    </div>*@
+    <input type="submit" class="btn btn-success btn-lg" value="Kaydet" />
+</form>
+
+@section JavaScript{
+    <script src="~/lib/jqueryValidate/jquery.validate.min.js"></script>
+    <script src="~/lib/jqueryUnob/jquery.validate.unobtrusive.min.js"></script>
+
+}
+

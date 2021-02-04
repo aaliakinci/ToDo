@@ -1,0 +1,100 @@
+﻿@model List<GorevListViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+@if (Model.Count != 0)
+{
+    <a asp-action="AddGorev" asp-controller="Gorev" asp-area="Admin" class="btn btn-outline-dark my-4"><i class="fas fa-plus-circle mr-2"></i> Görev Ekle</a>
+    <table class="table table-hover table-sm">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Ad</td>
+                <td>Aciklama</td>
+                <td>Oluşturulma Tarihi</td>
+                <td>Aciliyet</td>
+                <td>İşlem</td>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.ID</td>
+                    <td>@item.Ad</td>
+                    <td>@item.Aciklama</td>
+                    <td>@item.OlusturulmaTarihi.ToString("D")</td>
+                    <td>@item.Aciliyet.Tanim</td>
+                    <td><a asp-action="UpdateGorev" asp-controller="Gorev" asp-area="Admin" class="btn btn-primary" asp-route-id="@item.ID"><i class="far fa-edit mr-2"></i>Güncelle</a></td>
+                    <td><a class="btn btn-danger" data-toggle="modal" data-target="#silmeEkrani" data-ali="@item.ID"><i class=" fas fa-times-circle mr-2"></i>Sil</a></td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+}
+else
+{
+    <div class="p-3 text-center mt-3 ">
+        <p class="lead">Herhangi bir görev bulunamadı</p>
+        <a asp-action="AddGorev" asp-controller="Gorev" asp-area="Admin" class="btn btn-info"><i class="fas fa-plus-circle mr-2"> Görev Ekle</a>
+    </div>
+}
+<!-- Modal -->
+<div class="modal fade" id="silmeEkrani" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Uyarı</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Silmek istediğinizden emin misiniz?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Vazgeç</button>
+                <button type="button" id="btnSil" class="btn btn-primary">Sil</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section JavaScript
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#silmeEkrani").on("show.bs.modal", function (event) {
+                let tetikleyenElement = $(event.relatedTarget);
+                let id = tetikleyenElement.data("ali")
+                $("#btnSil").click(function () {
+                    $.ajax({
+                        type: "Get",
+                        url: "./Gorev/DeleteGorev",
+                        data: { id: id },
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        success: function () {
+                            alert("Silindi..");
+                            window.location.reload();
+                        },
+                        error: function (error) {
+                            alert(error.statusText);
+                        }
+                    })
+
+                })
+
+
+            })
+        })
+
+    </script>
+
+
+}

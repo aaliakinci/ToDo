@@ -1,0 +1,42 @@
+﻿@model AppUserAddViewModel
+@{
+    ViewData["Title"] = "SignIn";
+    Layout = "~/Views/Shared/_StandartLayout.cshtml";
+}
+
+<form class="w-50 shadow mt-4 mx-auto" method="post" asp-action="Register">
+    <div class="form-group">
+        <label asp-for="UserName" class="col-form-label-sm"></label>
+        <span asp-validation-for="UserName"></span>
+        <input asp-for="UserName" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Name" class="col-form-label-sm"></label>
+        <span asp-validation-for="Name"></span>
+        <input asp-for="Name" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Surname" class="col-form-label-sm"></label>
+        <span asp-validation-for="Surname"></span>
+        <input asp-for="Surname" type="text" class="form-control" />
+
+    </div>
+    <div class="form-group">
+        <label asp-for="Password" class="col-form-label-sm"></label>
+        <span asp-validation-for="Password"></span>
+        <input asp-for="Password" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="ConfirmPassword" class="col-form-label-sm"></label>
+        <span asp-validation-for="ConfirmPassword"></span>
+        <input asp-for="ConfirmPassword" type="text" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Email" class="col-form-label-sm"></label>
+        <span asp-validation-for="Email"></span>
+        <input asp-for="Email" type="text" class="form-control" />
+    </div>
+    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+    <input type="submit" class="btn btn-success" value="Kayıt Ol" />
+    <p>Zaten kayıtlımısınız üye girişi yapmak için lütfen <a asp-action="Index" asp-controller="Home" class="alert-link">tıklayınız</a></p>
+</form>

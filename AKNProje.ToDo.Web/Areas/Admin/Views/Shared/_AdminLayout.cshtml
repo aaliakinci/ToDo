@@ -1,0 +1,102 @@
+﻿@{ 
+    string active = string.Empty;
+    if (TempData["Active"] !=null)
+    {
+        active = TempData["Active"].ToString();
+    }
+
+}
+
+
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/lib/bootswatch/bootstrap.min.css" rel="stylesheet" />
+
+
+
+    <!-- Custom styles for this template -->
+    <link href="~/lib/template-css/simple-sidebar.css" rel="stylesheet" />
+
+    <!--FontAwesome Css-->
+    <link href="~/lib/fontAwesome/css/all.min.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+
+    <div class="d-flex" id="wrapper">
+
+        <!-- Sidebar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading">Admin Layout </div>
+            <div class="list-group list-group-flush">
+                <a asp-action="Index" asp-controller="Gorev" asp-area="Admin" class="list-group-item list-group-item-action @(active=="gorev"?"active":"") "><i class="fas fa-tasks mr-2"></i>Görev İşlemleri</a>
+                <a asp-action="Index" asp-controller="Aciliyet" asp-area="Admin" class="list-group-item list-group-item-action @(active=="aciliyet"?"active":"") "><i class="fas fa-exclamation mr-2"></i>Aciliyet İşlemleri</a>
+                <a asp-action="Index" asp-controller="IsEmri" asp-area="Admin" class="list-group-item list-group-item-action @(active=="isemirleri"?"active":"") "><i class="fas fa-file mr-2"></i>İş Emirleri</a>
+                <a href="#" class="list-group-item list-group-item-action "><i class="fas fa-chart-pie mr-2"></i>Grafikler</a>
+                <a href="#" class="list-group-item list-group-item-action "><i class="fas fa-chart-area mr-2"></i>İstatistikler</a>
+                <a href="#" class="list-group-item list-group-item-action "><i class="fas fa-sign-out-alt mr-2"></i>Çıkış Yap</a>
+            </div>
+        </div>
+        <!-- /#sidebar-wrapper -->
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+            <nav class="navbar navbar-expand-lg navbar-light border-bottom">
+                <button class="btn btn-outline-primary btn-sm" id="menu-toggle"><i class="fas fa-exchange-alt mr-2"></i> Menü</button>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                            <li class="nav-item @(active=="anasayfa"?"active":"")">
+                                <a class="nav-link" asp-action="Index" asp-controller="Home" asp-area="Admin"><i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item @(active=="bildirimler"?"active":"")">
+                                <a class="nav-link" href="#"><i class="fas fa-bell mr-2"></i>Bildirimler</a>
+                            </li>
+                            <li class="nav-item @(active=="profilim"?"active":"")">
+                                <a class="nav-link" asp-action="Index" asp-controller="Profil" asp-area="Admin"><i class="fas fa-user mr-2"></i>Profilim</a>
+                            </li>
+                        </ul>
+                    </div>
+            </nav>
+
+            <div class="container-fluid">
+                @RenderBody()
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/jquery/jquery.min.js"></script>
+    <script src="~/lib/twitter-bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/fontAwesome/js/all.min.js"></script>
+    @RenderSection("JavaScript", false)
+
+    <!-- Menu Toggle Script -->
+    <script>
+    $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });</script>
+
+</body>
+
+</html>

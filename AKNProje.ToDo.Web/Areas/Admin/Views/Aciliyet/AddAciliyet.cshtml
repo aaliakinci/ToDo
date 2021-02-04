@@ -1,0 +1,21 @@
+﻿@model AciliyetAddViewModel
+@{
+    ViewData["Title"] = "AddAciliyet";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form class="w-75 mx-auto p-3 shadow" method="post">
+    <div class="form-group">
+        <label asp-for="Tanim" class="col-form-label"></label>
+        <span asp-validation-for="Tanim" class="text-danger"></span>
+        <input type="text" asp-for="Tanim" class="form-control" />
+    </div>
+    <input type="submit" class="btn btn-success btn-lg" value="Kaydet" />
+</form>
+
+@section JavaScript{
+    <script src="~/lib/jqueryValidate/jquery.validate.min.js"></script>
+    <script src="~/lib/jqueryUnob/jquery.validate.unobtrusive.min.js"></script>
+
+}
+

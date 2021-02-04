@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AKNProje.ToDo.DAL\AKNProje.ToDo.DAL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Concrete\EntitiyFrameWorkCore\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EPPlus" Version="5.4.2" />
+    <PackageReference Include="FastMember" Version="1.5.0" />
+    <PackageReference Include="iTextSharp.LGPLv2.Core" Version="1.7.0" />
+  </ItemGroup>
+
+</Project>
