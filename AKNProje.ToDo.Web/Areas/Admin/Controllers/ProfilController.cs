@@ -1,14 +1,20 @@
 ﻿using AKNProje.ToDo.Entities.Concrete;
+using AKNProje.ToDo.Web.Areas.Admin.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace AKNProje.ToDo.Web.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
+
     public class ProfilController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
@@ -16,9 +22,58 @@ namespace AKNProje.ToDo.Web.Areas.Admin.Controllers
         {
             _userManager = userManager;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            TempData["Active"] = "profil";
+            var appUser = await _userManager.FindByNameAsync(User.Identity.Name);
+            AppUserListViewModel model = new AppUserListViewModel();
+            model.Name = appUser.Name;
+            model.Id = appUser.Id;
+            model.Surname = appUser.Surname;
+            model.Picture = appUser.PictureUrl;
+            model.Email = appUser.Email;
+
+            return View(model);
+           
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Index(AppUserListViewModel model,IFormFile Picture)
+        {
+            if(ModelState.IsValid)
+            {
+                var updatedUser = _userManager.Users.FirstOrDefault(x => x.Id == model.Id);
+                if(Picture != null)
+                {
+                    string pictureUrl = Path.GetExtension(Picture.FileName); 
+                    string pictureName = Guid.NewGuid()+pictureUrl;
+                    string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/" + pictureName);
+                    using (var stream = new FileStream(path,FileMode.Create))
+                    {
+                        await Picture.CopyToAsync(stream);
+                    }
+                    updatedUser.PictureUrl = pictureName;
+                }
+                updatedUser.Name = model.Name;
+                updatedUser.Surname = model.Surname;
+                updatedUser.Email = model.Email;
+
+                var result = await _userManager.UpdateAsync(updatedUser);
+                if(result.Succeeded)
+                {
+                    TempData["Updated"] = "Güncelleme işleminiz başarı ile gerçekleşti";
+                    return RedirectToAction("Index");
+                }
+                foreach (var item in result.Errors)
+                {
+                    ModelState.AddModelError("", item.Description);
+                }
+            }
+ 
+            
+
+            return View(model);
+
         }
     }
 }

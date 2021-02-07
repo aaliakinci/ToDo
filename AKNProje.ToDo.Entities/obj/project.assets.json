@@ -808,11 +808,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aliak\\source\\repos\\ToDo\\AKNProje.ToDo.Entities\\AKNProje.ToDo.Entities.csproj",
+      "projectUniqueName": "C:\\Users\\aliak\\Desktop\\Çalışmalar\\Todo\\AKNProje.ToDo.Entities\\AKNProje.ToDo.Entities.csproj",
       "projectName": "AKNProje.ToDo.Entities",
-      "projectPath": "C:\\Users\\aliak\\source\\repos\\ToDo\\AKNProje.ToDo.Entities\\AKNProje.ToDo.Entities.csproj",
+      "projectPath": "C:\\Users\\aliak\\Desktop\\Çalışmalar\\Todo\\AKNProje.ToDo.Entities\\AKNProje.ToDo.Entities.csproj",
       "packagesPath": "C:\\Users\\aliak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aliak\\source\\repos\\ToDo\\AKNProje.ToDo.Entities\\obj\\",
+      "outputPath": "C:\\Users\\aliak\\Desktop\\Çalışmalar\\Todo\\AKNProje.ToDo.Entities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -9888,11 +9888,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aliak\\source\\repos\\ToDo\\AKNProje.ToDo.Web\\AKNProje.ToDo.Web.csproj",
+      "projectUniqueName": "C:\\Users\\aliak\\Desktop\\Çalışmalar\\Todo\\AKNProje.ToDo.Web\\AKNProje.ToDo.Web.csproj",
       "projectName": "AKNProje.ToDo.Web",
-      "projectPath": "C:\\Users\\aliak\\source\\repos\\ToDo\\AKNProje.ToDo.Web\\AKNProje.ToDo.Web.csproj",
+      "projectPath": "C:\\Users\\aliak\\Desktop\\Çalışmalar\\Todo\\AKNProje.ToDo.Web\\AKNProje.ToDo.Web.csproj",
       "packagesPath": "C:\\Users\\aliak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aliak\\source\\repos\\ToDo\\AKNProje.ToDo.Web\\obj\\",
+      "outputPath": "C:\\Users\\aliak\\Desktop\\Çalışmalar\\Todo\\AKNProje.ToDo.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -9912,8 +9912,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\aliak\\source\\repos\\ToDo\\AKNProje.ToDo.BLL\\AKNProje.ToDo.BLL.csproj": {
-              "projectPath": "C:\\Users\\aliak\\source\\repos\\ToDo\\AKNProje.ToDo.BLL\\AKNProje.ToDo.BLL.csproj"
+            "C:\\Users\\aliak\\Desktop\\Çalışmalar\\Todo\\AKNProje.ToDo.BLL\\AKNProje.ToDo.BLL.csproj": {
+              "projectPath": "C:\\Users\\aliak\\Desktop\\Çalışmalar\\Todo\\AKNProje.ToDo.BLL\\AKNProje.ToDo.BLL.csproj"
             }
           }
         }

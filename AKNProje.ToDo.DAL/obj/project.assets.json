@@ -5854,11 +5854,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aliak\\source\\repos\\ToDo\\AKNProje.ToDo.DAL\\AKNProje.ToDo.DAL.csproj",
+      "projectUniqueName": "C:\\Users\\aliak\\Desktop\\Çalışmalar\\Todo\\AKNProje.ToDo.DAL\\AKNProje.ToDo.DAL.csproj",
       "projectName": "AKNProje.ToDo.DAL",
-      "projectPath": "C:\\Users\\aliak\\source\\repos\\ToDo\\AKNProje.ToDo.DAL\\AKNProje.ToDo.DAL.csproj",
+      "projectPath": "C:\\Users\\aliak\\Desktop\\Çalışmalar\\Todo\\AKNProje.ToDo.DAL\\AKNProje.ToDo.DAL.csproj",
       "packagesPath": "C:\\Users\\aliak\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aliak\\source\\repos\\ToDo\\AKNProje.ToDo.DAL\\obj\\",
+      "outputPath": "C:\\Users\\aliak\\Desktop\\Çalışmalar\\Todo\\AKNProje.ToDo.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -5878,8 +5878,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\aliak\\source\\repos\\ToDo\\AKNProje.ToDo.Entities\\AKNProje.ToDo.Entities.csproj": {
-              "projectPath": "C:\\Users\\aliak\\source\\repos\\ToDo\\AKNProje.ToDo.Entities\\AKNProje.ToDo.Entities.csproj"
+            "C:\\Users\\aliak\\Desktop\\Çalışmalar\\Todo\\AKNProje.ToDo.Entities\\AKNProje.ToDo.Entities.csproj": {
+              "projectPath": "C:\\Users\\aliak\\Desktop\\Çalışmalar\\Todo\\AKNProje.ToDo.Entities\\AKNProje.ToDo.Entities.csproj"
             }
           }
         }

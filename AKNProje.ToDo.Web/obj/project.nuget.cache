@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MMJwUn/hemvQ9uuQ1FX+q9ybKEr8vnD7fVYxrd/9c02LVOZK2JuR9b03Gl8OB9dt0YYejCjpv8RiyurLGiYcQQ==",
+  "dgSpecHash": "nUULbALvbn5Qb6qde7ATAF1xhv8i6LxnyGbh2mmNgVUqGbM11GvAmsrR+XxesfRhSvdlJKWN0Zn8siRjBtgcug==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aliak\\source\\repos\\ToDo\\AKNProje.ToDo.Web\\AKNProje.ToDo.Web.csproj",
+  "projectFilePath": "C:\\Users\\aliak\\Desktop\\Çalışmalar\\Todo\\AKNProje.ToDo.Web\\AKNProje.ToDo.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aliak\\.nuget\\packages\\epplus\\5.4.2\\epplus.5.4.2.nupkg.sha512",
     "C:\\Users\\aliak\\.nuget\\packages\\fastmember\\1.5.0\\fastmember.1.5.0.nupkg.sha512",

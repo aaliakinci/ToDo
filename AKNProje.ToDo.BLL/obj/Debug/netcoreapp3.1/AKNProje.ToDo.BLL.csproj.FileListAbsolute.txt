@@ -12,3 +12,17 @@ C:\Users\aliak\source\repos\ToDo\AKNProje.ToDo.BLL\obj\Debug\netcoreapp3.1\AKNPr
 C:\Users\aliak\source\repos\ToDo\AKNProje.ToDo.BLL\obj\Debug\netcoreapp3.1\AKNProje.ToDo.BLL.csproj.CopyComplete
 C:\Users\aliak\source\repos\ToDo\AKNProje.ToDo.BLL\obj\Debug\netcoreapp3.1\AKNProje.ToDo.BLL.dll
 C:\Users\aliak\source\repos\ToDo\AKNProje.ToDo.BLL\obj\Debug\netcoreapp3.1\AKNProje.ToDo.BLL.pdb
+C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.BLL\bin\Debug\netcoreapp3.1\AKNProje.ToDo.BLL.deps.json
+C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.BLL\bin\Debug\netcoreapp3.1\AKNProje.ToDo.BLL.dll
+C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.BLL\bin\Debug\netcoreapp3.1\AKNProje.ToDo.BLL.pdb
+C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.BLL\bin\Debug\netcoreapp3.1\AKNProje.ToDo.DAL.dll
+C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.BLL\bin\Debug\netcoreapp3.1\AKNProje.ToDo.Entities.dll
+C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.BLL\bin\Debug\netcoreapp3.1\AKNProje.ToDo.DAL.pdb
+C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.BLL\bin\Debug\netcoreapp3.1\AKNProje.ToDo.Entities.pdb
+C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.BLL\obj\Debug\netcoreapp3.1\AKNProje.ToDo.BLL.csprojAssemblyReference.cache
+C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.BLL\obj\Debug\netcoreapp3.1\AKNProje.ToDo.BLL.AssemblyInfoInputs.cache
+C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.BLL\obj\Debug\netcoreapp3.1\AKNProje.ToDo.BLL.AssemblyInfo.cs
+C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.BLL\obj\Debug\netcoreapp3.1\AKNProje.ToDo.BLL.csproj.CoreCompileInputs.cache
+C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.BLL\obj\Debug\netcoreapp3.1\AKNProje.ToDo.BLL.csproj.CopyComplete
+C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.BLL\obj\Debug\netcoreapp3.1\AKNProje.ToDo.BLL.dll
+C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.BLL\obj\Debug\netcoreapp3.1\AKNProje.ToDo.BLL.pdb

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9yqjk2EiR4zZ3Rq0TUj0NunCJ9dcVjXzib8JPUBeSdy2aEaklFXSTmuNWiBQpuBPwFRHCbqzzhddlbCH7ka1QQ==",
+  "dgSpecHash": "G3OWLjv81c0Fnau7LCP5iw+rqC96ocfNdMpymFbU/NEqBo2cRw5bLxkIpZgDy2dad2UDhQI+9i3dG7LKbFuIFQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\aliak\\source\\repos\\ToDo\\AKNProje.ToDo.DAL\\AKNProje.ToDo.DAL.csproj",
+  "projectFilePath": "C:\\Users\\aliak\\Desktop\\Çalışmalar\\Todo\\AKNProje.ToDo.DAL\\AKNProje.ToDo.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\aliak\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\aliak\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",

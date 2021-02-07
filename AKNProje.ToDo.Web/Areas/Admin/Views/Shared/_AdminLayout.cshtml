@@ -1,11 +1,4 @@
-﻿@{ 
-    string active = string.Empty;
-    if (TempData["Active"] !=null)
-    {
-        active = TempData["Active"].ToString();
-    }
-
-}
+﻿
 
 
 <!DOCTYPE html>
@@ -39,17 +32,7 @@
     <div class="d-flex" id="wrapper">
 
         <!-- Sidebar -->
-        <div class="bg-light border-right" id="sidebar-wrapper">
-            <div class="sidebar-heading">Admin Layout </div>
-            <div class="list-group list-group-flush">
-                <a asp-action="Index" asp-controller="Gorev" asp-area="Admin" class="list-group-item list-group-item-action @(active=="gorev"?"active":"") "><i class="fas fa-tasks mr-2"></i>Görev İşlemleri</a>
-                <a asp-action="Index" asp-controller="Aciliyet" asp-area="Admin" class="list-group-item list-group-item-action @(active=="aciliyet"?"active":"") "><i class="fas fa-exclamation mr-2"></i>Aciliyet İşlemleri</a>
-                <a asp-action="Index" asp-controller="IsEmri" asp-area="Admin" class="list-group-item list-group-item-action @(active=="isemirleri"?"active":"") "><i class="fas fa-file mr-2"></i>İş Emirleri</a>
-                <a href="#" class="list-group-item list-group-item-action "><i class="fas fa-chart-pie mr-2"></i>Grafikler</a>
-                <a href="#" class="list-group-item list-group-item-action "><i class="fas fa-chart-area mr-2"></i>İstatistikler</a>
-                <a href="#" class="list-group-item list-group-item-action "><i class="fas fa-sign-out-alt mr-2"></i>Çıkış Yap</a>
-            </div>
-        </div>
+        @await Component.InvokeAsync("Wrapper") 
         <!-- /#sidebar-wrapper -->
         <!-- Page Content -->
         <div id="page-content-wrapper">
@@ -61,7 +44,7 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    @*<div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                             <li class="nav-item @(active=="anasayfa"?"active":"")">
                                 <a class="nav-link" asp-action="Index" asp-controller="Home" asp-area="Admin"><i class="fas fa-home"></i> Home <span class="sr-only">(current)</span></a>
@@ -73,7 +56,7 @@
                                 <a class="nav-link" asp-action="Index" asp-controller="Profil" asp-area="Admin"><i class="fas fa-user mr-2"></i>Profilim</a>
                             </li>
                         </ul>
-                    </div>
+                    </div>*@
             </nav>
 
             <div class="container-fluid">
