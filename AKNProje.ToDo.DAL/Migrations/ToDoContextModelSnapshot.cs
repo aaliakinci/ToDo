@@ -19,22 +19,6 @@ namespace AKNProje.ToDo.DAL.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("AKNProje.ToDo.Entities.Concrete.Aciliyet", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Tanim")
-                        .HasColumnType("nvarchar(100)")
-                        .HasMaxLength(100);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Aciliyetler");
-                });
-
             modelBuilder.Entity("AKNProje.ToDo.Entities.Concrete.AppRole", b =>
                 {
                     b.Property<int>("Id")
@@ -142,7 +126,7 @@ namespace AKNProje.ToDo.DAL.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("AKNProje.ToDo.Entities.Concrete.Gorev", b =>
+            modelBuilder.Entity("AKNProje.ToDo.Entities.Concrete.Job", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -151,37 +135,37 @@ namespace AKNProje.ToDo.DAL.Migrations
                         .HasAnnotation("SqlServer:IdentitySeed", 1)
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Aciklama")
+                    b.Property<int?>("AppUserId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
                         .HasColumnType("ntext")
                         .HasMaxLength(300);
 
-                    b.Property<int>("AciliyetId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Ad")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(200)")
                         .HasMaxLength(200);
 
-                    b.Property<int?>("AppUserId")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("Durum")
+                    b.Property<bool>("Status")
                         .HasColumnType("bit");
 
-                    b.Property<DateTime>("OlusturulmaTarihi")
-                        .HasColumnType("datetime2");
+                    b.Property<int>("UrgencyId")
+                        .HasColumnType("int");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("AciliyetId");
-
                     b.HasIndex("AppUserId");
 
-                    b.ToTable("Gorevler");
+                    b.HasIndex("UrgencyId");
+
+                    b.ToTable("Jobs");
                 });
 
-            modelBuilder.Entity("AKNProje.ToDo.Entities.Concrete.Rapor", b =>
+            modelBuilder.Entity("AKNProje.ToDo.Entities.Concrete.Report", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -190,23 +174,39 @@ namespace AKNProje.ToDo.DAL.Migrations
                         .HasAnnotation("SqlServer:IdentitySeed", 1)
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Detay")
-                        .HasColumnType("ntext")
-                        .HasMaxLength(150);
-
-                    b.Property<int>("GorevId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Tanim")
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(150)")
                         .HasMaxLength(150);
 
+                    b.Property<string>("Detail")
+                        .HasColumnType("ntext")
+                        .HasMaxLength(150);
+
+                    b.Property<int>("JobId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("GorevId");
+                    b.HasIndex("JobId");
 
-                    b.ToTable("Raporlar");
+                    b.ToTable("Reports");
+                });
+
+            modelBuilder.Entity("AKNProje.ToDo.Entities.Concrete.Urgency", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(100)")
+                        .HasMaxLength(100);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Urgencys");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<int>", b =>
@@ -310,25 +310,25 @@ namespace AKNProje.ToDo.DAL.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("AKNProje.ToDo.Entities.Concrete.Gorev", b =>
+            modelBuilder.Entity("AKNProje.ToDo.Entities.Concrete.Job", b =>
                 {
-                    b.HasOne("AKNProje.ToDo.Entities.Concrete.Aciliyet", "Aciliyet")
-                        .WithMany("Gorevler")
-                        .HasForeignKey("AciliyetId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("AKNProje.ToDo.Entities.Concrete.AppUser", "AppUser")
-                        .WithMany("Gorevler")
+                        .WithMany("Jobs")
                         .HasForeignKey("AppUserId")
                         .OnDelete(DeleteBehavior.SetNull);
+
+                    b.HasOne("AKNProje.ToDo.Entities.Concrete.Urgency", "Urgency")
+                        .WithMany("Jobs")
+                        .HasForeignKey("UrgencyId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
-            modelBuilder.Entity("AKNProje.ToDo.Entities.Concrete.Rapor", b =>
+            modelBuilder.Entity("AKNProje.ToDo.Entities.Concrete.Report", b =>
                 {
-                    b.HasOne("AKNProje.ToDo.Entities.Concrete.Gorev", "Gorev")
-                        .WithMany("Rapor")
-                        .HasForeignKey("GorevId")
+                    b.HasOne("AKNProje.ToDo.Entities.Concrete.Job", "Job")
+                        .WithMany("Report")
+                        .HasForeignKey("JobId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

@@ -21,8 +21,8 @@ namespace AKNProje.ToDo.Web
             {
                 await roleManager.CreateAsync(new AppRole() { Name = "Member" });
             }
-            var IsadminUser = await userManager.FindByNameAsync("aliakincii");
-            if (IsadminUser == null)
+            var IsAdminUser = await userManager.FindByNameAsync("aliakincii");
+            if (IsAdminUser == null)
             {
                 AppUser user = new AppUser { UserName = "aliakincii", Name = "Ali", Surname = "Akıncı", Email = "aliakincii@hotmail.com.tr" };
                 await userManager.CreateAsync(user, "Ali*159639*");

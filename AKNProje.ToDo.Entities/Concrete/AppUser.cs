@@ -11,7 +11,7 @@ namespace AKNProje.ToDo.Entities.Concrete
         public string Name { get; set; }
         public string Surname { get; set; }
         public string PictureUrl { get; set; } = "user.png";
-        public List<Gorev> Gorevler { get; set; }
+        public List<Job> Jobs { get; set; }
 
     }
 }

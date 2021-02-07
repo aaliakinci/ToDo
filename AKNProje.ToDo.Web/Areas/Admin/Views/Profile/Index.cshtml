@@ -1,0 +1,66 @@
+﻿@model AppUserListViewModel
+@{
+    ViewData["Title"] = "Admin";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+@if (TempData["Updated"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["Updated"]
+    </div>
+}
+<form asp-action="Index" method="post" class="w-75 mx-auto p-3" enctype="multipart/form-data">
+    <input type="hidden" asp-for="@Model.Id" />
+    <div class="form-group">
+        <div class="col-md-12 d-flex justify-content-center">
+            <div class="form-group">
+                <h4 class="text-start">Şuanki Resminiz</h4>
+                <img src="~/img/@Model.Picture" class="img-fluid" style="height:7rem!important;width:7rem!important" alt="@Model.Picture" />
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.ad"></label>
+        <span asp-validation-for="@Model.ad" class="text-danger"></span>
+        <input asp-for="@Model.ad" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Surad"></label>
+        <span asp-validation-for="@Model.Surad" class="text-danger"></span>
+        <input asp-for="@Model.Surad" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="@Model.Email"></label>
+        <span asp-validation-for="@Model.Email" class="text-danger"></span>
+        <input asp-for="@Model.Email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <div class="row">
+            <div class="col-md-7">
+                <div id="previewArea" style="display:none">
+                    <h4 class="text-start">Seçtiğiniz Resim</h4>
+                    <div id="picturePreview">
+                        <img src="" id="previewImg" style="height:7rem!important;width:7rem!important" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <label>Resim Seç:</label>
+                <input type="file" class="form-control-file" id="picture" name="Picture" />
+            </div>
+
+        </div>
+        <button type="submit" class="btn btn-sm btn-info"><i class="fa fa-check"></i>Save</button>
+    </div>
+</form>
+@section Javascript{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#picture').change((e) => {
+                $('#previewArea').show();
+                $('#previewImg').attr('src', URL.createObjectURL(e.target.files[0]));
+            })
+        })
+    </script>
+}
+

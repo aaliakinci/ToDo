@@ -16,17 +16,17 @@ namespace AKNProje.ToDo.DAL.Concrete.EntityFrameworkcore.Contexts
             base.OnConfiguring(optionsBuilder);
         }
        
-        public DbSet<Gorev> Gorevler { get; set; }
-        public DbSet<Aciliyet> Aciliyetler { get; set; }
+        public DbSet<Job> Jobs { get; set; }
+        public DbSet<Urgency> Urgencys { get; set; }
 
-        public DbSet<Rapor> Raporlar { get; set; }
+        public DbSet<Report> Reports { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new AppUserMapping());
-            modelBuilder.ApplyConfiguration(new RaporMap());
-            modelBuilder.ApplyConfiguration(new AciliyetMapping());
-            modelBuilder.ApplyConfiguration(new GorevMap());
+            modelBuilder.ApplyConfiguration(new ReportMap());
+            modelBuilder.ApplyConfiguration(new UrgencyMapping());
+            modelBuilder.ApplyConfiguration(new JobMap());
             base.OnModelCreating(modelBuilder);
         }
     }

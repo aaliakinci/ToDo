@@ -1,7 +1,8 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <StartupObject></StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,12 +12,35 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Member\Data\" />
-    <Folder Include="Areas\Member\Models\" />
+    <Folder Include="Areas\Member\Views\Shared\Components\" />
     <Folder Include="wwwroot\css\" />
     <Folder Include="wwwroot\documents\" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Areas\Admin\Views\Urgency\AddUrgency.cshtml" />
+    <None Include="Areas\Admin\Views\Urgency\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Urgency\UpdateUrgency.cshtml" />
+    <None Include="Areas\Admin\Views\Admin\Admin.cshtml" />
+    <None Include="Areas\Admin\Views\Job\AddJob.cshtml" />
+    <None Include="Areas\Admin\Views\Job\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Job\UpdateJob.cshtml" />
+    <None Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <None Include="Areas\Admin\Views\JobComment\AssignStaff.cshtml" />
+    <None Include="Areas\Admin\Views\JobComment\Detaylandir.cshtml" />
+    <None Include="Areas\Admin\Views\JobComment\Index.cshtml" />
+    <None Include="Areas\Admin\Views\JobComment\AssignJob.cshtml" />
+    <None Include="Areas\Admin\Views\Profile\Index.cshtml" />
+    <None Include="Areas\Admin\Views\Shared\_AdminLayout.cshtml" />
+    <None Include="Areas\Admin\Views\_ViewImports.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
   </ItemGroup>
 

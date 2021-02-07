@@ -8,6 +8,7 @@ namespace AKNProje.ToDo.DAL.Interface
     public interface IAppUserDAL 
     {
         public List<AppUser> GetAppUsersWithoutAdmin();
-        public List<AppUser> GetAppUsersWithoutAdmin(out int toplamSayfa ,string aranacakKelime, int sayfa);
+        public List<AppUser> GetAppUsersWithoutAdmin(out int totalPage ,string searchWord, int page);
+        //List<AppUser> GetAppUsersWithoutAdmin();
     }
 }

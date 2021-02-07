@@ -10,9 +10,9 @@ C:\Users\aliak\source\repos\ToDo\AKNProje.ToDo.Entities\obj\Debug\netcoreapp3.1\
 C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.Entities\bin\Debug\netcoreapp3.1\AKNProje.ToDo.Entities.deps.json
 C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.Entities\bin\Debug\netcoreapp3.1\AKNProje.ToDo.Entities.dll
 C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.Entities\bin\Debug\netcoreapp3.1\AKNProje.ToDo.Entities.pdb
-C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.Entities\obj\Debug\netcoreapp3.1\AKNProje.ToDo.Entities.csprojAssemblyReference.cache
 C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.Entities\obj\Debug\netcoreapp3.1\AKNProje.ToDo.Entities.AssemblyInfoInputs.cache
 C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.Entities\obj\Debug\netcoreapp3.1\AKNProje.ToDo.Entities.AssemblyInfo.cs
 C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.Entities\obj\Debug\netcoreapp3.1\AKNProje.ToDo.Entities.csproj.CoreCompileInputs.cache
 C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.Entities\obj\Debug\netcoreapp3.1\AKNProje.ToDo.Entities.dll
 C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.Entities\obj\Debug\netcoreapp3.1\AKNProje.ToDo.Entities.pdb
+C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.Entities\obj\Debug\netcoreapp3.1\AKNProje.ToDo.Entities.csprojAssemblyReference.cache

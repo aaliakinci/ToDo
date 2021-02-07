@@ -1,0 +1,72 @@
+﻿@model List<JobListAllViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@if (Model.Count>0)
+{
+    <table class="table table-hover table-sm mt-3">
+        <thead>
+            <tr>
+                <th>ad</th>
+                <th>Açıklama</th>
+                <th>Oluşturulma Tarihi</th>
+                <th>Çalışan Personel</th>
+                <th>Urgency</th>
+                <th>Report Sayısı</th>
+                <th>İşlem</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.ad</td>
+                <td>@item.Description</td>
+                <td>@item.CreatedAt.ToString("D")</td>
+                <td>@{
+                    if (item.AppUser==null)
+                    {
+                        <span class="badge badge-danger">Çalışan personel bulunmamakta</span>
+                    }
+                    else
+                    {
+                        <span class=" badge badge-success p-2">@item.AppUser.Name çalışıyor</span>
+                    }
+                    
+                }</td>
+                <td> @item.Urgency.Description</td>
+                <td>@item.Report.Count</td>
+                <td>
+                    @{
+                        if (item.AppUser == null)
+                        {
+                            <a asp-action="AssignStaff" asp-route-id="@item.ID" class="btn btn-info btn-sm" >Personel Ata</a>
+                        }
+                        else
+                        {
+                            <a asp-action="Detaillandir" asp-route-id="@item.ID" class="btn btn-info btn-sm">Detail Göster</a>
+                        }
+
+                                }
+                            </td>
+
+
+
+            </tr>
+            }
+
+        </tbody>
+
+
+    </table>
+}
+else
+{
+<div class="my-3 text-center lead">
+    <p>Görev bulunmamaktadır</p>
+</div>
+    
+}
+

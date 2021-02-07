@@ -12,7 +12,22 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
+#line 2 "C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.Web\Areas\Member\Views\_ViewImports.cshtml"
+using AKNProje.ToDo.Web.Areas.Admin.Models;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\aliak\Desktop\Çalışmalar\Todo\AKNProje.ToDo.Web\Areas\Member\Views\_ViewImports.cshtml"
+using AKNProje.ToDo.Web.Areas.Member.Models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"eeab8abf052dc3f5067eae525234ef0cb03b30ee", @"/Areas/Member/Views/Home/Index.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8acbe65a1beb47995db001adbde8d62dbc8054b3", @"/Areas/Member/Views/_ViewImports.cshtml")]
     public class Areas_Member_Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

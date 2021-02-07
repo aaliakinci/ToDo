@@ -64,7 +64,7 @@ abbr[data-original-title] {
   text-decoration-skip-ink: none;
 }
 
-address {
+Address {
   margin-bottom: 1rem;
   font-style: normal;
   line-height: inherit;
@@ -177,8 +177,8 @@ table {
 }
 
 caption {
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  pAdding-top: 0.75rem;
+  pAdding-bottom: 0.75rem;
   color: #6c757d;
   text-align: left;
   caption-side: bottom;
@@ -250,14 +250,14 @@ button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
-  padding: 0;
+  pAdding: 0;
   border-style: none;
 }
 
 input[type="radio"],
 input[type="checkbox"] {
   box-sizing: border-box;
-  padding: 0;
+  pAdding: 0;
 }
 
 textarea {
@@ -267,7 +267,7 @@ textarea {
 
 fieldset {
   min-width: 0;
-  padding: 0;
+  pAdding: 0;
   margin: 0;
   border: 0;
 }
@@ -276,7 +276,7 @@ legend {
   display: block;
   width: 100%;
   max-width: 100%;
-  padding: 0;
+  pAdding: 0;
   margin-bottom: .5rem;
   font-size: 1.5rem;
   line-height: inherit;

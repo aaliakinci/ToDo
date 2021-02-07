@@ -11,12 +11,12 @@ namespace AKNProje.ToDo.Web.Areas.Admin.Models
         public int Id { get; set; }
         [Display(Name="Ad")]
         [Required(ErrorMessage ="Ad Alanı boş geçilemez")]
-        public string Name { get; set; }
+        public string ad { get; set; }
         [Display(Name = "Soyad")]
 
-        [Required(ErrorMessage = "SoyAd Alanı boş geçilemez")]
+        [Required(ErrorMessage = "Soyad Alanı boş geçilemez")]
 
-        public string Surname { get; set; }
+        public string Surad { get; set; }
         
 
         public string Picture { get; set; }

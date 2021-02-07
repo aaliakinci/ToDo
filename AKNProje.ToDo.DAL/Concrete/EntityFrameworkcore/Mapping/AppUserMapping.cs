@@ -14,7 +14,7 @@ namespace AKNProje.ToDo.DAL.Concrete.EntityFrameworkcore.Mapping
             builder.Property(x => x.Name).HasMaxLength(100);
             builder.Property(x => x.Surname).HasMaxLength(100);
 
-            builder.HasMany(x => x.Gorevler).WithOne(x => x.AppUser).HasForeignKey(x=>x.AppUserId).OnDelete(DeleteBehavior.SetNull);
+            builder.HasMany(x => x.Jobs).WithOne(x => x.AppUser).HasForeignKey(x=>x.AppUserId).OnDelete(DeleteBehavior.SetNull);
         }
     }
 }

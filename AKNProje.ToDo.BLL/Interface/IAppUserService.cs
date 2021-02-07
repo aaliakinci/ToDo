@@ -9,6 +9,6 @@ namespace AKNProje.ToDo.BLL.Interface
     public interface IAppUserService 
     {
         List<AppUser> GetAppUsersWithoutAdmin();
-        List<AppUser> GetAppUsersWithoutAdmin(out int toplamSayfa, string aranacakKelime, int sayfa);
+        List<AppUser> GetAppUsersWithoutAdmin(out int totalPage, string searchWord, int page);
     }
 }

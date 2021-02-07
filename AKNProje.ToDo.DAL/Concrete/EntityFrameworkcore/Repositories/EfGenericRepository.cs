@@ -11,7 +11,7 @@ namespace AKNProje.ToDo.DAL.Concrete.EntityFrameworkcore.Repositories
 {
     public class EfGenericRepository<Tablo> : IGenericDAL<Tablo> where Tablo : class, ITablo, new()
     {
-        public List<Tablo> GetirHepsi()
+        public List<Tablo> GetAll()
         {
             using (var context = new ToDoContext())
             {
@@ -19,7 +19,7 @@ namespace AKNProje.ToDo.DAL.Concrete.EntityFrameworkcore.Repositories
             }
         }
 
-        public Tablo GetirIdile(int id)
+        public Tablo GetById(int id)
         {
             using (var context = new ToDoContext())
             {
@@ -27,7 +27,7 @@ namespace AKNProje.ToDo.DAL.Concrete.EntityFrameworkcore.Repositories
             }
         }
 
-        public void Güncelle(Tablo tablo)
+        public void Update(Tablo tablo)
         {
             using (var context = new ToDoContext())
             {
@@ -36,7 +36,7 @@ namespace AKNProje.ToDo.DAL.Concrete.EntityFrameworkcore.Repositories
             }
         }
 
-        public void Kaydet(Tablo tablo)
+        public void Save(Tablo tablo)
         {
             using (var context = new ToDoContext())
             {
@@ -45,11 +45,13 @@ namespace AKNProje.ToDo.DAL.Concrete.EntityFrameworkcore.Repositories
             }
         }
 
-        public void Sil(Tablo tablo)
+        public void Delete(Tablo tablo)
         {
             using var context = new ToDoContext();
             context.Entry(tablo).State = Microsoft.EntityFrameworkCore.EntityState.Deleted;
             context.SaveChanges();
         }
+
+        
     }
 }

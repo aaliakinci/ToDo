@@ -1,0 +1,24 @@
+﻿@model AppUserListViewModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    string active = string.Empty;
+    if (TempData["Active"] != null)
+    {
+        active = TempData["Active"].ToString();
+    }
+
+}
+<div class="bg-light border-right" id="sidebar-wrapper">
+    <div class="sidebar-heading">
+        <img src="~/img/@Model.Picture" alt="@Model.ad" class="img-thumbnail img-fluid" style="height:10rem!important" />
+    </div>
+    <div class="list-group list-group-flush">
+        <a asp-action="Index" asp-controller="Job" asp-area="Member" asp-route-id="@Model.Id" class="list-group-item list-group-item-action @(active=="Job"?"active":"") "><i class="fas fa-times mr-2"></i>Görevler</a>
+        <a asp-action="Index" asp-controller="Urgency" asp-area="Admin" class="list-group-item list-group-item-action @(active=="Urgency"?"active":"") "><i class="fas fa-check mr-2"></i>Tamamlanan Görevler</a>
+
+        <a asp-action="Index" asp-controller="Profil" asp-area="Member" class="list-group-item list-group-item-action @(active=="profil"?"active":"") "><i class="fas fa-user mr-2"></i>Profil</a>
+        <a asp-area="" asp-controller="Home" asp-action="Logout" class="list-group-item list-group-item-action "><i class="fas fa-sign-out-alt mr-2"></i>Çıkış Yap</a>
+    </div>
+</div>

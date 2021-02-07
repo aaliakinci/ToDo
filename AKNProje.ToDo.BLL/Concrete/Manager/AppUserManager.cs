@@ -19,9 +19,9 @@ namespace AKNProje.ToDo.BLL.Concrete.Manager
             return _appUserDAL.GetAppUsersWithoutAdmin();
         }
 
-        public List<AppUser> GetAppUsersWithoutAdmin(out int toplamSayfa , string aranacakKelime, int sayfa)
+        public List<AppUser> GetAppUsersWithoutAdmin(out int totalPage , string searchWord, int page)
         {
-            return _appUserDAL.GetAppUsersWithoutAdmin(out toplamSayfa,aranacakKelime, sayfa);
+            return _appUserDAL.GetAppUsersWithoutAdmin(out totalPage,searchWord, page);
         }
     }
 }

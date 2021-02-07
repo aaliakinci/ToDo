@@ -36,7 +36,7 @@ namespace AKNProje.ToDo.DAL.Concrete.EntityFrameworkcore.Repositories
             }
         }
 
-        public List<AppUser> GetAppUsersWithoutAdmin(out int toplamSayfa , string aranacakKelime, int sayfa=1)
+        public List<AppUser> GetAppUsersWithoutAdmin(out int totalPage , string searchWord, int page=1)
         {
             using (var context = new ToDoContext())
             {
@@ -60,14 +60,14 @@ namespace AKNProje.ToDo.DAL.Concrete.EntityFrameworkcore.Repositories
                     UserName = x.user.UserName
 
                 });
-                toplamSayfa =(int) Math.Ceiling((double)result.Count() / 3);
-                if (!string.IsNullOrEmpty(aranacakKelime))
+                totalPage =(int) Math.Ceiling((double)result.Count() / 3);
+                if (!string.IsNullOrEmpty(searchWord))
                 {
-                     result = result.Where(x => x.Name.ToLower().Contains(aranacakKelime.ToLower()) || x.Surname.ToLower().Contains(aranacakKelime.ToLower()));
-                    toplamSayfa = (int)Math.Ceiling((double)result.Count() / 3);
+                     result = result.Where(x => x.Name.ToLower().Contains(searchWord.ToLower()) || x.Surname.ToLower().Contains(searchWord.ToLower()));
+                    totalPage = (int)Math.Ceiling((double)result.Count() / 3);
                 }
 
-                 result = result.Skip((sayfa - 1) * 3).Take(3);
+                 result = result.Skip((page - 1) * 3).Take(3);
                  return result.ToList();
             }
         }

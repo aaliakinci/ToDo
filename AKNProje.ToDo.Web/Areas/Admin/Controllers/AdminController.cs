@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+ 
 
 namespace AKNProje.ToDo.Web.Areas.Admin.Controllers
 {
@@ -23,9 +24,9 @@ namespace AKNProje.ToDo.Web.Areas.Admin.Controllers
         {
             var appUser = await _userManager.FindByNameAsync(User.Identity.Name);
             AppUserListViewModel model = new AppUserListViewModel();
-            model.Name = appUser.Name;
+            model.ad = appUser.Name;
             model.Id = appUser.Id;
-            model.Surname = appUser.Surname;
+            model.Surad = appUser.Surname;
             model.Email = appUser.Email;
             return View();
         }

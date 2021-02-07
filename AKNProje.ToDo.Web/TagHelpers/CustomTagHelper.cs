@@ -3,27 +3,27 @@ using Microsoft.AspNetCore.Razor.TagHelpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
+ 
 
 namespace AKNProje.ToDo.Web.TagHelpers
 {
-    [HtmlTargetElement("getirGorevileAppUserId")]
+    [HtmlTargetElement("getJobWithAppUserById")]
     public class CustomTagHelper:TagHelper
     {
-        private readonly IGorevService _gorevService;
-        public CustomTagHelper(IGorevService gorevService)
+        private readonly IJobService _JobService;
+        public CustomTagHelper(IJobService JobService)
         {
-            _gorevService = gorevService;
+            _JobService = JobService;
         }
         public int AppUserId { get; set; }
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
-            int tamamladigiGorevSayisi = _gorevService.GetGorevwithAppUserID(AppUserId).Where(x=>x.Durum).Count();
-            int calistigiGorevSayisi = _gorevService.GetGorevwithAppUserID(AppUserId).Where(x => !x.Durum).Count();
+            int tamamladigiJobSayisi = _JobService.GetJobsWithAppUserID(AppUserId).Where(x=>x.Status).Count();
+            int calistigiJobSayisi = _JobService.GetJobsWithAppUserID(AppUserId).Where(x => !x.Status).Count();
 
-            string html = $"<p> Tamamladığı görev sayısı:<strong>{tamamladigiGorevSayisi}</strong></p>" +
-                $"<p>Üstünde çalıştığı görev sayısı:<strong>{calistigiGorevSayisi}</strong></p>";
+            string html = $"<p> Tamamladığı görev sayısı:<strong>{tamamladigiJobSayisi}</strong></p>" +
+                $"<p>Üstünde çalıştığı görev sayısı:<strong>{calistigiJobSayisi}</strong></p>";
 
             output.Content.SetHtmlContent(html);
         }

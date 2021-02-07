@@ -9,17 +9,17 @@ namespace AKNProje.ToDo.Web.Models
     public class AppUserAddViewModel
     {
 
-        [Display(Name="Kullanıcı adı")]
+        [Display(Name = "Kullanıcı adı")]
         [Required(ErrorMessage ="Kullanıcı adı gereklidir.")]
-        public string UserName { get; set; }
+        public string Userad { get; set; }
 
-        [Display(Name = " Adı :")]
-        [Required(ErrorMessage = "Ad alanı gereklidir.")]
-        public string Name { get; set; }
+        [Display(Name = " adı :")]
+        [Required(ErrorMessage = "ad alanı gereklidir.")]
+        public string ad { get; set; }
 
         [Display(Name = "Soyad :")]
         [Required(ErrorMessage = "Soyadı alanı gereklidir.")]
-        public string Surname { get; set; }
+        public string Surad { get; set; }
 
         [Display(Name = "Şifre :")]
         [Required(ErrorMessage = "Şifre alanı gereklidir")]

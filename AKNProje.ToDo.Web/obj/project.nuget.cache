@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nUULbALvbn5Qb6qde7ATAF1xhv8i6LxnyGbh2mmNgVUqGbM11GvAmsrR+XxesfRhSvdlJKWN0Zn8siRjBtgcug==",
+  "dgSpecHash": "oNDpne+bwUuZfSminTsdCCUqd8OkCbo1OgWogkCttymGKnc9l/B8WCYUg0zBeXnRkHufEtqp4u2am3/oXU6m5w==",
   "success": true,
   "projectFilePath": "C:\\Users\\aliak\\Desktop\\Çalışmalar\\Todo\\AKNProje.ToDo.Web\\AKNProje.ToDo.Web.csproj",
   "expectedPackageFiles": [
@@ -36,11 +36,12 @@
     "C:\\Users\\aliak\\.nuget\\packages\\microsoft.codeanalysis.csharp.workspaces\\3.3.1\\microsoft.codeanalysis.csharp.workspaces.3.3.1.nupkg.sha512",
     "C:\\Users\\aliak\\.nuget\\packages\\microsoft.codeanalysis.razor\\3.1.0\\microsoft.codeanalysis.razor.3.1.0.nupkg.sha512",
     "C:\\Users\\aliak\\.nuget\\packages\\microsoft.codeanalysis.workspaces.common\\3.3.1\\microsoft.codeanalysis.workspaces.common.3.3.1.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\aliak\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\aliak\\.nuget\\packages\\microsoft.data.sqlclient\\1.0.19269.1\\microsoft.data.sqlclient.1.0.19269.1.nupkg.sha512",
     "C:\\Users\\aliak\\.nuget\\packages\\microsoft.entityframeworkcore\\3.1.2\\microsoft.entityframeworkcore.3.1.2.nupkg.sha512",
     "C:\\Users\\aliak\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\3.1.2\\microsoft.entityframeworkcore.abstractions.3.1.2.nupkg.sha512",
     "C:\\Users\\aliak\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\3.1.2\\microsoft.entityframeworkcore.analyzers.3.1.2.nupkg.sha512",
+    "C:\\Users\\aliak\\.nuget\\packages\\microsoft.entityframeworkcore.design\\3.1.2\\microsoft.entityframeworkcore.design.3.1.2.nupkg.sha512",
     "C:\\Users\\aliak\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\3.1.2\\microsoft.entityframeworkcore.relational.3.1.2.nupkg.sha512",
     "C:\\Users\\aliak\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\3.1.2\\microsoft.entityframeworkcore.sqlserver.3.1.2.nupkg.sha512",
     "C:\\Users\\aliak\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.2\\microsoft.extensions.caching.abstractions.3.1.2.nupkg.sha512",

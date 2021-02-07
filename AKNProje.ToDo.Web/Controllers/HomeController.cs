@@ -31,11 +31,11 @@ namespace AKNProje.ToDo.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                var Myuser = await _userManager.FindByNameAsync(model.UserName);
+                var Myuser = await _userManager.FindByNameAsync(model.Userad);
                
                 if (Myuser != null)
                 {
-                    var IdentityResult = await _signInManager.PasswordSignInAsync(model.UserName, model.Password, model.IsPresistent, false);
+                    var IdentityResult = await _signInManager.PasswordSignInAsync(model.Userad, model.Password, model.IsPresistent, false);
                     if (IdentityResult.Succeeded)
                     {
                         var userRole = await _userManager.GetRolesAsync(Myuser);
@@ -68,9 +68,9 @@ namespace AKNProje.ToDo.Web.Controllers
 
                 AppUser user = new AppUser()
                 {
-                    UserName = model.UserName,
-                    Name = model.Name,
-                    Surname = model.Surname,
+                    UserName = model.Userad,
+                    Name = model.ad,
+                    Surname = model.Surad,
                     //PasswordHash = model.Password,
                     Email = model.Email,
                 };

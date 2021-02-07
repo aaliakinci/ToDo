@@ -6,14 +6,14 @@
 
 <form class="w-75 mx-auto p-3">
     <div class="form-group">
-        <label asp-for="@Model.Name"></label>
-        <span asp-validation-for="@Model.Name" class="text-danger"></span>
-        <input asp-for="@Model.Name" class="form-control" />
+        <label asp-for="@Model.ad"></label>
+        <span asp-validation-for="@Model.ad" class="text-danger"></span>
+        <input asp-for="@Model.ad" class="form-control" />
     </div>
     <div class="form-group">
-        <label asp-for="@Model.Surname"></label>
-        <span asp-validation-for="@Model.Surname" class="text-danger"></span>
-        <input asp-for="@Model.Surname" class="form-control" />
+        <label asp-for="@Model.Surad"></label>
+        <span asp-validation-for="@Model.Surad" class="text-danger"></span>
+        <input asp-for="@Model.Surad" class="form-control" />
     </div>
     <div class="form-group">
         <label asp-for="@Model.Email"></label>
@@ -29,11 +29,11 @@
                  </div>
                  <div class="col-md-12">
                      <label>Resim Seç:</label>
-                     <input type="file" class="form-control-file" name="Resim"/>
+                     <input type="file" class="form-control-file" ad="Resim"/>
                  </div>
              </div>
          </div>
-         <button type="submit" class="btn btn-sm btn-info"><i class="fa fa-check"></i>Kaydet</button>
+         <button type="submit" class="btn btn-sm btn-info"><i class="fa fa-check"></i>Save</button>
      </div>
 </form>
  

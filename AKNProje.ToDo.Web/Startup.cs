@@ -16,23 +16,23 @@ namespace AKNProje.ToDo.Web
 {
     public class Startup
     {
-        // This method gets called by the runtime. Use this method to add services to the container.
+        // This method gets called by the runtime. Use this method to Add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IRaporService, RaporManager>();
-            services.AddScoped<IAciliyetService, AciliyetManager>();
-            services.AddScoped<IGorevService, GorevManager>();
+            services.AddScoped<IReportService, ReportManager>();
+            services.AddScoped<IUrgencyService, UrgencyManager>();
+            services.AddScoped<IJobService, JobManager>();
             services.AddScoped<IAppUserService, AppUserManager>();
-            services.AddScoped<IDosyaService, DosyaManager>();
+            services.AddScoped<IDocumentService, DocumentManager>();
 
 
             services.AddControllersWithViews();
 
 
-            services.AddScoped<IGorevDAL, EfGorevRepository>();
-            services.AddScoped<IRaporDAL, EfRaporRepository>();
-            services.AddScoped<IAciliyetDAL, EfAciliyetRepository>();
+            services.AddScoped<IJobDAL, EfJobRepository>();
+            services.AddScoped<IReportDAL, EfReportRepository>();
+            services.AddScoped<IUrgencyDAL, EfUrgencyRepository>();
             services.AddScoped<IAppUserDAL, EfAppUserRepository>();
 
 
